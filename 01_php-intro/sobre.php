@@ -12,15 +12,16 @@ $pagina_atual = "sobre";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="includes/style.css">
     <title>Sobre - <?php echo $nome; ?></title>
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; background: #f3f4f6;">
+<body>
 
 <?php include 'includes/cabecalho.php'; ?>
 
-<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-    <h1 style="color: #3b579d;">👤 Sobre mim</h1>
+<div>
+    <h1>👤 Sobre mim</h1>
 
     <p>Olá! Sou <strong><?php echo $nome; ?></strong>, estudante de
     Técnico em Informática no IFPR de Ponta Grossa.</p>
@@ -28,7 +29,7 @@ $pagina_atual = "sobre";
     <p>Eu gosto muito de programação especialmente front-end, meus interesses profissionais são de me formar no curso, fazer uma faculdade relacionada e me formar na área.</p>
 
     <a href="index.php"
-       style="color: #3b579d; font-weight: bold;">← Voltar ao início</a>
+       >← Voltar ao início</a>
 </div>
 
 <?php include 'includes/rodape.php'; ?>
