@@ -22,3 +22,5 @@ services:
       MARIADB_PASSWORD: dwii2026
     ports:
       - "3306:3306"
+    volumes:
+      - ./.devcontainer/db-init:/docker-entrypoint-initdb.d
