@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  *
@@ -23,3 +24,11 @@ $autor = isset($nome) ? htmlspecialchars($nome) : "Gustavo Henrique Maciel";
     | Desenvolvido com PHP
     | IFPR — Ponta Grossa
 </footer>
+=======
+<footer>
+    &copy; <?php echo date("Y"); ?> Gustavo Henrique Maciel
+</footer>
+
+</body>
+</html>
+>>>>>>> e7cfe0f (entregando o atraso)

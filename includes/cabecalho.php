@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  *
@@ -44,3 +45,15 @@ if (!isset($caminho_raiz))  $caminho_raiz  = "../"; // padrão: um nível acima
 // funciona independente de onde a página que o chamou está.
 include __DIR__ . '/nav.php';
 ?>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="../includes/index.css">
+    
+</head>
+<body>
+>>>>>>> e7cfe0f (entregando o atraso)
