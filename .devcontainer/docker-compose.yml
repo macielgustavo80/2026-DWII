@@ -1,6 +1,16 @@
 version: '3.8'
+<<<<<<< HEAD
 services:
   # Container PHP (ambiente de desenvolvimento)
+=======
+<<<<<<< HEAD
+
+services:
+=======
+services:
+  # Container PHP (ambiente de desenvolvimento)
+>>>>>>> e7cfe0f (entregando o atraso)
+>>>>>>> b31e8cd91490c374ee553ebec06af96d471f917a
   app:
     build:
       context: .
@@ -11,16 +21,40 @@ services:
       - db
     network_mode: service:db
     command: sleep infinity
+<<<<<<< HEAD
   # Container MariaDB
+=======
+<<<<<<< HEAD
+
+=======
+  # Container MariaDB
+>>>>>>> e7cfe0f (entregando o atraso)
+>>>>>>> b31e8cd91490c374ee553ebec06af96d471f917a
   db:
     image: mariadb:10.11
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: dwii2026
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      MARIADB_DATABASE: dwii_db
+      MARIADB_USER: dwii_user
+      MARIADB_PASSWORD: dwii2026
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./.devcontainer/db-init:/docker-entrypoint-initdb.d
+=======
+>>>>>>> b31e8cd91490c374ee553ebec06af96d471f917a
       MARIADB_DATABASE:      dwii_db
       MARIADB_USER:          dwii_user
       MARIADB_PASSWORD:      dwii2026
     ports:
       - "3306:3306"
+<<<<<<< HEAD
     volumes:
       - ./.devcontainer/db-init:/docker-entrypoint-initdb.d
+=======
+>>>>>>> e7cfe0f (entregando o atraso)
+>>>>>>> b31e8cd91490c374ee553ebec06af96d471f917a
