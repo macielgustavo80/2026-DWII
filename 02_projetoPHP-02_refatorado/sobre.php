@@ -1,0 +1,75 @@
+<?php
+/**
+ * ════════════════════════════════════════════════════════════
+ * Disciplina : Desenvolvimento Web II (DWII)
+ * Projeto    : Portfólio Pessoal — versão refatorada
+ * Arquivo    : sobre.php
+ * Autor      : Gustavo Henrique Maciel
+ * Data       : 19/04/2026
+ * Descrição  : Página "Sobre" com informações acadêmicas
+ *              organizadas em estrutura de dados (array).
+ * ════════════════════════════════════════════════════════════
+ */
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$pagina_atual = 'sobre';
+$caminho_raiz = './';
+$titulo_pagina = 'Sobre — Gustavo Maciel';
+
+$formacoes = [
+    [
+        'curso' => 'Ensino Médio Integrado ao Técnico em Informática',
+        'instituicao' => 'IFPR - Campus Ponta Grossa',
+        'ano' => '2024 - 2026'
+    ]
+];
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <?php
+  /*
+   * include injeta o conteúdo de cabecalho.php aqui dentro.
+   * Ele gera: <meta>, <title>, <link rel="stylesheet"> e o <nav>.
+   * __DIR__ garante o caminho correto independente de onde este
+   * arquivo está sendo executado.
+   */
+  include __DIR__ . '/includes/cabecalho.php';
+  ?>
+</head>
+<body>
+<main>
+    <section class="sobre">
+        <h1>Sobre mim</h1>
+
+        <p>
+            Olá! Sou <strong>Gustavo Henrique Maciel</strong>, estudante do
+            Ensino Médio integrado ao curso Técnico em Informática no IFPR.
+        </p>
+
+        <p>
+            Tenho interesse em desenvolvimento web, sistemas e cibersegurança. Venho construindo minha base em HTML, CSS, PHP, banco de dados e lógica de programação, buscando transformar ideias em projetos funcionais e bem organizados.
+        </p>
+
+        <p>
+            Além da parte técnica, procuro desenvolver projetos com foco em qualidade, segurança, organização de código e aplicação prática dos conceitos estudados em sala.
+        </p>
+
+        <h2>Formação acadêmica</h2>
+
+        <?php foreach ($formacoes as $f): ?>
+            <p>
+                <?= $f['curso'] ?> — <?= $f['instituicao'] ?>
+                (<?= $f['ano'] ?>)
+            </p>
+        <?php endforeach; ?>
+
+        <div class="btn">
+            <a href="index.php">Voltar ao início</a>
+        </div>
+    </section>
+</main>
+<?php include __DIR__ . '/includes/rodape.php'; ?>
+</body>
+</html>
